@@ -11,10 +11,22 @@ export default function resume() {
   return (
     <>
       <FloatingNav navItems={navItems} />
-      <div className="pt-28 grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <div className="pt-28 flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <h1 className="pt-25 text-4xl font-bold text-center">
           Res<span className="text-blue-500">ume</span>
         </h1>
+
+      <p className="text-lg text-gray-600 text-center">Semester 1 Resume</p>
+      <img
+          src="/CV-Muhammad Rafi Isnaen-2702303362.jpg"
+          alt="Resume of Muhammad Rafi Isnaen"
+          className="w-full max-w-4xl rounded-lg shadow-lg"
+        />
+      <a
+        href="/CV-Muhammad Rafi Isnaen-2702303362.jpg"
+        download
+        className="mt-8 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+      >Download Resume</a>
       </div>
     </>
   );
