@@ -1,4 +1,7 @@
+"use client";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import { Button } from "@/components/ui/button"
+
 
 export default function resume() {
   const navItems = [
@@ -8,6 +11,16 @@ export default function resume() {
     { name: "Experience", link: "/experience", icon: null },
     { name: "Resume", link: "/resume", icon: null },
   ];
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/CV-Muhammad Rafi Isnaen-2702303362.jpg";
+    link.download = "Resume-Muhammad-Rafi-Isnaen.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <FloatingNav navItems={navItems} />
@@ -22,11 +35,14 @@ export default function resume() {
           alt="Resume of Muhammad Rafi Isnaen"
           className="w-full max-w-4xl rounded-lg shadow-lg"
         />
-      <a
+      {/* <a
         href="/CV-Muhammad Rafi Isnaen-2702303362.jpg"
         download
         className="mt-8 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-      >Download Resume</a>
+      >Download Resume</a> */}
+      <Button variant="secondary" onClick={handleDownload}>
+        Download here
+      </Button>
       </div>
     </>
   );
